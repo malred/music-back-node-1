@@ -9,7 +9,7 @@ export async function insertBlog(blog, res) {
                     DATE_FORMAT(now(), '%Y-%m-%d'));
         `)
     } catch {
-        return R.ERR('添加文章失败')
+        return R.ERR('添加文章失败',res)
     }
 }
 // 添加文章
