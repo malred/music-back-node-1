@@ -1,5 +1,7 @@
-import db from "../../utils/db";
-import R from '../../utils/res';
+// import db from "../../utils/db";
+const db = require('../../utils/db')
+// import R from '../../utils/res'
+const R = require('../../utils/res')
 /** 从数据库获取文章 */ 
 export async function getBlogsByUid(uid, res) {
     try {

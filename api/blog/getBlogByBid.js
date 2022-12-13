@@ -1,5 +1,7 @@
-import db from "../../utils/db";
-import R from '../../utils/res'
+// import db from "../../utils/db";
+const db = require('../../utils/db')
+// import R from '../../utils/res'
+const R = require('../../utils/res')
 import { toBlog } from "./getUserBlogs";
 /** 从数据库查询文章(根据bid) */
 export async function getOneBlogByBid(bid, res) {
