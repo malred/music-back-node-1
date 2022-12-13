@@ -35,6 +35,7 @@ export default async function getUserBlogs(req, res) {
     // 获取用户id
     const { uid } = req.query
     try {
+        console.log(uid);
         if (uid !== undefined && uid !== null && uid !== '') {
             let rows = await getBlogsByUid(uid)
             let arr = []// 返回的数组 
@@ -42,7 +43,7 @@ export default async function getUserBlogs(req, res) {
             // console.log(res[0] !== undefined);
             if (rows[0].length > 0 && rows[0] !== undefined) {
                 for (let i = 0; i < rows[0].length; i++) {
-                    // 封装为对象
+                    // 封装为对象 
                     arr.push(await toBlog(rows[0][i]))
                 }
             }

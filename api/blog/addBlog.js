@@ -21,6 +21,7 @@ export default async function addBlog(req, res) {
     let blog = {
         uid, title, content, cover
     }
+    console.log(blog);
     try {
         await insertBlog(blog, res)
         return R.OK('添加成功', res)
